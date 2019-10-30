@@ -1,0 +1,1 @@
+{"ast":null,"code":"export let JobTypes;\n\n(function (JobTypes) {\n  JobTypes[\"GET_JOBS\"] = \"@@types/GET_JOBS\";\n  JobTypes[\"GET_JOBS_ASYNC\"] = \"@@types/GET_JOBS_ASYNC\";\n})(JobTypes || (JobTypes = {}));","map":null,"metadata":{},"sourceType":"module"}
