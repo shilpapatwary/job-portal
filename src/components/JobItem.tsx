@@ -34,6 +34,10 @@ const JobListItem = styled.li`
   &:hover {
     background-color: #b8860b66;
   }
+  @media (max-width: 48rem) {
+      width: 100%;
+      margin-bottom: 1rem;
+  }
 `;
 
 const JobTitle = styled.h3`
@@ -64,6 +68,11 @@ const Button = styled.button`
   font-size: 13px;
   color: #ffffff;
   text-transform: uppercase;
+  cursor: pointer;
+  @media (max-width: 48rem) {
+    margin: 0.5rem;
+    width:45%;
+}
 `;
 
 export default JobItem;

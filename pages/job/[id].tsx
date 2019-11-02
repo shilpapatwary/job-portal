@@ -1,30 +1,21 @@
 import React, { Component } from 'react';
 import { Job, JobTypes} from '../../src/redux/types';
 import Layout from '../../src/components/Layout';
-import { createGlobalStyle } from 'styled-components';
 import {connect} from "react-redux";
 import JobDetails from '../../src/components/JobDetails';
+import GlobalStyles from '../../src/styles/GlobalStyles';
 
 interface Props {
      jobsList: Array<Job>,
      currentJob: Job
  }
 
- const GlobalStyle = createGlobalStyle`
- body, h1,h2,h3, ol, li {
-   margin:0;
-   padding:0;
- }
- li {
-     list-style: none;
- }
- `;
 
  class JobDetailsPage extends Component<Props, any> {
     render() {
         return <Layout>
-            <GlobalStyle />
-            {this.props.currentJob && <JobDetails job={this.props.currentJob}></JobDetails>}
+            <GlobalStyles />
+            {this.props.currentJob ? <JobDetails job={this.props.currentJob}></JobDetails> : <div>Loading ..</div>}
         </Layout>
     }
 

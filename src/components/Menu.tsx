@@ -30,12 +30,22 @@ const HeaderMenu = styled.div`
  display:flex;
  justify-content: space-between;
  margin: 0 3%;
+ @media (max-width: 48rem) {
+    flex-direction: column;
+    margin: 0;
+}
 `;
 const MainMenu = styled.div`
-display: flex;
-justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 48rem) {
+    &:nth-child(1) {
+        background-color: #f0f8ff;
+    }
+  }
 `;
+
 const MenuList = styled.ul`
   display: flex;
 `;

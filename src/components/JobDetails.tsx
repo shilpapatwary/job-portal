@@ -36,10 +36,18 @@ padding: 3%;
 width:50%;
 background-color: antiquewhite;
 color: #000000b8;
+@media (max-width: 48rem) {
+   width: 100%;
+   margin: 0;
+   box-sizing: border-box;
+}
 `;
 const JobTitle = styled.h1`
 font-size: 2.3rem;
 letter-spacing:2px;
+@media (max-width: 48rem) {
+    font-size: 2rem;
+}
 `;
 const JobSubInfo = styled.div`
 width: 26%;
@@ -48,6 +56,10 @@ width: 26%;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-style: italic;
+    @media (max-width: 48rem) {
+        width: 100%;
+        margin-top:3%;
+    }
 `;
 const JobDesc = styled.p`
 `;
@@ -56,6 +68,11 @@ const ApplySection = styled.section`
 `;
 const FlexItem = styled.section`
  display: flex;
+ @media (max-width: 48rem) {
+   flex-direction: column;
+   box-sizing: border-box;
+   margin: 4% 4%;
+}
 `;
 const Button = styled.button`
 font-weight: bold;

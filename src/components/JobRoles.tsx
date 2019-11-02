@@ -5,7 +5,7 @@ const JobRoles: React.FC = () => {
   return (
     <JobRolesSection>
         <FlexItem>
-        <h3>Roles & Responsibilities</h3><Divider></Divider>
+        <ListHeader>Roles & Responsibilities</ListHeader><Divider></Divider>
       </FlexItem>
       <JobRolesList>
         <JobRole>
@@ -38,8 +38,15 @@ const JobRoles: React.FC = () => {
 };
 
 const JobRolesSection = styled.section``;
+const ListHeader = styled.h3`
+@media (max-width: 48rem) {
+    font-size: 1.1rem;
+}
+`;
 const JobRolesList = styled.ol`
-    
+@media (max-width: 48rem) {
+    padding: 0 3%;
+}
 `;
 const JobRole = styled.li`
  margin: 2% 0.5rem;
