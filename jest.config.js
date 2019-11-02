@@ -8,5 +8,8 @@ module.exports = {
   },
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  collectCoverage: false
+  collectCoverage: false,
+  moduleNameMapper: {
+    ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
+  }
 }

@@ -57,7 +57,7 @@ export const withRedux = (PageComponent, { ssr = true } = {}) => {
   return WithRedux
 }
 
-let reduxStore
+let reduxStore;
 const getOrInitializeStore = initialState => {
   // Always make a new store if server, otherwise state is shared between requests
   if (typeof window === 'undefined') {
@@ -69,5 +69,5 @@ const getOrInitializeStore = initialState => {
     reduxStore = initializeStore(initialState)
   }
 
-  return reduxStore
+  return reduxStore;
 }

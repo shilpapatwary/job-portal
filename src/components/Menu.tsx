@@ -2,28 +2,45 @@ import React from 'react';
 import { faQuestionCircle, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
 import {faFacebook, faInstagram, faPinterest, faTwitter} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled from "styled-components";
 
 const Menu: React.FC = () => { 
     return(
-        <div className="header-menu flex flex-direction-row justify-space-between">
-            <div className="main--menu">
-            <ul className="flex flex-direction-row">
-                <li><FontAwesomeIcon icon={faQuestionCircle} /></li>
-                <li><FontAwesomeIcon icon={faUser} /></li>
-                <li><FontAwesomeIcon icon={faHeart} /></li>
-            </ul>
-            </div>
-            <div className="main--menu flex flex-direction-row">
-            <span>Follow us on:</span>
-            <ul className="flex flex-direction-row">
-                <li><FontAwesomeIcon icon={faFacebook} /></li>
-                <li><FontAwesomeIcon icon={faInstagram} /></li>
-                <li><FontAwesomeIcon icon={faPinterest} /></li>
-                <li><FontAwesomeIcon icon={faTwitter} /></li>
-            </ul>
-            </div>
-        </div>
+        <HeaderMenu className="header-menu">
+            <MainMenu>
+                <MenuList>
+                    <MenuItem><FontAwesomeIcon icon={faQuestionCircle} /></MenuItem>
+                    <MenuItem><FontAwesomeIcon icon={faUser} /></MenuItem>
+                    <MenuItem><FontAwesomeIcon icon={faHeart} /></MenuItem>
+                </MenuList>
+            </MainMenu>
+            <MainMenu>
+                <span>Follow us on:</span>
+                <MenuList>
+                    <MenuItem><FontAwesomeIcon icon={faFacebook} /></MenuItem>
+                    <MenuItem><FontAwesomeIcon icon={faInstagram} /></MenuItem>
+                    <MenuItem><FontAwesomeIcon icon={faPinterest} /></MenuItem>
+                    <MenuItem><FontAwesomeIcon icon={faTwitter} /></MenuItem>
+                </MenuList>
+            </MainMenu>
+        </HeaderMenu>
     )
 }
-
+const HeaderMenu = styled.div`
+ display:flex;
+ justify-content: space-between;
+ margin: 0 3%;
+`;
+const MainMenu = styled.div`
+display: flex;
+justify-content: center;
+    align-items: center;
+`;
+const MenuList = styled.ul`
+  display: flex;
+`;
+const MenuItem = styled.li`
+  padding-right: 1.5rem;
+  color: #00000099;
+`;
 export default Menu;

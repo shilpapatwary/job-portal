@@ -208,6 +208,39 @@ module.exports = _asyncToGenerator;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+
+function _extends() {
+  _extends = _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/extends.js":
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/extends.js ***!
@@ -293,6 +326,18 @@ function _interopRequireWildcard(obj) {
 }
 
 module.exports = _interopRequireWildcard;
+
+/***/ }),
+
+/***/ "./node_modules/next/app.js":
+/*!**********************************!*\
+  !*** ./node_modules/next/app.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./dist/pages/_app */ "./node_modules/next/dist/pages/_app.js")
+
 
 /***/ }),
 
@@ -1658,14 +1703,268 @@ function createUrl(router) {
 
 /***/ }),
 
+/***/ "./pages/_app.js":
+/*!***********************!*\
+  !*** ./pages/_app.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next-redux-wrapper */ "next-redux-wrapper");
+/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_redux_wrapper__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_redux_saga__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next-redux-saga */ "next-redux-saga");
+/* harmony import */ var next_redux_saga__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_redux_saga__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _src_store_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../src/store/store */ "./src/store/store.ts");
+
+var _jsxFileName = "/Users/shipatwa/Desktop/challenges/heyjobs_challenge/pages/_app.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+
+
+
+
+class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
+  static async getInitialProps({
+    Component,
+    ctx
+  }) {
+    const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
+    return {
+      pageProps
+    };
+  }
+
+  render() {
+    const {
+      Component,
+      pageProps,
+      store
+    } = this.props;
+    return __jsx(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
+      store: store,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    })));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (next_redux_wrapper__WEBPACK_IMPORTED_MODULE_4___default()(_src_store_store__WEBPACK_IMPORTED_MODULE_6__["default"])(next_redux_saga__WEBPACK_IMPORTED_MODULE_5___default()(MyApp)));
+
+/***/ }),
+
+/***/ "./src/redux/reducer.ts":
+/*!******************************!*\
+  !*** ./src/redux/reducer.ts ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./src/redux/types.ts");
+
+
+const initialState = {
+  jobsList: undefined,
+  currentJob: undefined
+};
+
+const JobsApplicationReducer = (currentState = initialState, action) => {
+  switch (action.type) {
+    case _types__WEBPACK_IMPORTED_MODULE_1__["JobTypes"].GET_JOBS_ASYNC:
+      return getJobsReducer(currentState, action);
+
+    case _types__WEBPACK_IMPORTED_MODULE_1__["JobTypes"].GET_JOB_ASYNC:
+      return getJobReducer(currentState, action);
+
+    default:
+      return currentState;
+  }
+};
+
+function getJobsReducer(currentState, action) {
+  const data = action.payload || action.data;
+  return _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default()({}, currentState, {
+    jobsList: data
+  });
+}
+
+function getJobReducer(currentState, action) {
+  const id = action.payload.id || action.id;
+  const jobsList = action.payload.data;
+  const currentJob = jobsList.filter(job => job.id == id)[0];
+  return _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default()({}, currentState, {
+    jobsList: jobsList,
+    currentJob: currentJob
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (JobsApplicationReducer);
+
+/***/ }),
+
+/***/ "./src/redux/types.ts":
+/*!****************************!*\
+  !*** ./src/redux/types.ts ***!
+  \****************************/
+/*! exports provided: JobTypes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JobTypes", function() { return JobTypes; });
+let JobTypes;
+
+(function (JobTypes) {
+  JobTypes["GET_JOBS"] = "@@types/GET_JOBS";
+  JobTypes["GET_JOBS_ASYNC"] = "@@types/GET_JOBS_ASYNC";
+  JobTypes["GET_JOB"] = "@@types/GET_JOB";
+  JobTypes["GET_JOB_ASYNC"] = "@@types/GET_JOB_ASYNC";
+})(JobTypes || (JobTypes = {}));
+
+/***/ }),
+
+/***/ "./src/sagas/apis.ts":
+/*!***************************!*\
+  !*** ./src/sagas/apis.ts ***!
+  \***************************/
+/*! exports provided: getJobContent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getJobContent", function() { return getJobContent; });
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0__);
+
+async function getJobContent() {
+  const response = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0___default()('https://api.myjson.com/bins/cdxq0');
+  const body = await response.json();
+  if (response.status !== 200) throw Error(body.message);
+  return body;
+}
+
+/***/ }),
+
+/***/ "./src/sagas/sagas.ts":
+/*!****************************!*\
+  !*** ./src/sagas/sagas.ts ***!
+  \****************************/
+/*! exports provided: watchGetJobAsync, watchGetJobsAsync, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchGetJobAsync", function() { return watchGetJobAsync; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchGetJobsAsync", function() { return watchGetJobsAsync; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return root; });
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _redux_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../redux/types */ "./src/redux/types.ts");
+/* harmony import */ var _apis__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./apis */ "./src/sagas/apis.ts");
+
+
+
+function* watchGetJobAsync(jobID) {
+  const {
+    id
+  } = jobID;
+  const data = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["call"])(_apis__WEBPACK_IMPORTED_MODULE_2__["getJobContent"]);
+  const payload = {
+    data,
+    id
+  };
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+    type: _redux_types__WEBPACK_IMPORTED_MODULE_1__["JobTypes"].GET_JOB_ASYNC,
+    payload
+  });
+}
+
+function* watchGetJob() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_redux_types__WEBPACK_IMPORTED_MODULE_1__["JobTypes"].GET_JOB, watchGetJobAsync);
+}
+
+function* watchGetJobsAsync() {
+  const data = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["call"])(_apis__WEBPACK_IMPORTED_MODULE_2__["getJobContent"]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+    type: _redux_types__WEBPACK_IMPORTED_MODULE_1__["JobTypes"].GET_JOBS_ASYNC,
+    data
+  });
+}
+
+function* watchGetJobs() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_redux_types__WEBPACK_IMPORTED_MODULE_1__["JobTypes"].GET_JOBS, watchGetJobsAsync);
+}
+
+function* root() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchGetJobs);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchGetJob);
+}
+
+/***/ }),
+
+/***/ "./src/store/store.ts":
+/*!****************************!*\
+  !*** ./src/store/store.ts ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "redux");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _redux_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../redux/reducer */ "./src/redux/reducer.ts");
+/* harmony import */ var redux_saga__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-saga */ "redux-saga");
+/* harmony import */ var redux_saga__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_saga__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _sagas_sagas__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../sagas/sagas */ "./src/sagas/sagas.ts");
+
+
+
+
+
+const makeStore = (initialState, options) => {
+  const sagaMiddleware = redux_saga__WEBPACK_IMPORTED_MODULE_2___default()();
+  const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_redux_reducer__WEBPACK_IMPORTED_MODULE_1__["default"], initialState, Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(sagaMiddleware));
+  store.sagaTask = sagaMiddleware.run(_sagas_sagas__WEBPACK_IMPORTED_MODULE_3__["default"]);
+  return store;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (makeStore);
+
+/***/ }),
+
 /***/ 0:
-/*!**********************************!*\
-  !*** multi next/dist/pages/_app ***!
-  \**********************************/
+/*!****************************************!*\
+  !*** multi private-next-pages/_app.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next/dist/pages/_app */"./node_modules/next/dist/pages/_app.js");
+module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_app.js");
 
 
 /***/ }),
@@ -1736,6 +2035,39 @@ module.exports = require("core-js/library/fn/promise");
 
 /***/ }),
 
+/***/ "isomorphic-unfetch":
+/*!*************************************!*\
+  !*** external "isomorphic-unfetch" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("isomorphic-unfetch");
+
+/***/ }),
+
+/***/ "next-redux-saga":
+/*!**********************************!*\
+  !*** external "next-redux-saga" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next-redux-saga");
+
+/***/ }),
+
+/***/ "next-redux-wrapper":
+/*!*************************************!*\
+  !*** external "next-redux-wrapper" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next-redux-wrapper");
+
+/***/ }),
+
 /***/ "prop-types":
 /*!*****************************!*\
   !*** external "prop-types" ***!
@@ -1766,6 +2098,50 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
+
+/***/ }),
+
+/***/ "react-redux":
+/*!******************************!*\
+  !*** external "react-redux" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-redux");
+
+/***/ }),
+
+/***/ "redux":
+/*!************************!*\
+  !*** external "redux" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("redux");
+
+/***/ }),
+
+/***/ "redux-saga":
+/*!*****************************!*\
+  !*** external "redux-saga" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("redux-saga");
+
+/***/ }),
+
+/***/ "redux-saga/effects":
+/*!*************************************!*\
+  !*** external "redux-saga/effects" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("redux-saga/effects");
 
 /***/ }),
 
