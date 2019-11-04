@@ -22,7 +22,7 @@ describe("<IndexPage />", () => {
         wrapper.find(Header).length.should.equal(1);
     });
     
-    it('should contain RecipeList Component ', () => {
+    it('should contain JobList Component ', () => {
         wrapper.find(JobList).length.should.equal(1);
     });
 });
