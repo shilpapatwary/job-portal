@@ -1,4 +1,4 @@
-import { JobState, JobTypes } from "./types";
+import { JobState, JobTypes, Job } from "./types";
 import { AnyAction } from "redux";
 
 const initialState = {
@@ -26,7 +26,7 @@ function getJobsReducer(currentState: JobState, action: AnyAction) {
 function getJobReducer(currentState: JobState, action: AnyAction) {
     const id = action.payload.id || action.id;
     const jobsList = action.payload.data;
-    const currentJob = jobsList.filter(job => job.id == id)[0];
+    const currentJob = jobsList.filter((job: Job) => job.id == id)[0];
     return Object.assign({}, currentState, { jobsList: jobsList, currentJob: currentJob });
   }
 

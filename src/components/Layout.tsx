@@ -1,6 +1,9 @@
 import Header from "./Header";
 
-const Layout = props => (
+interface LayoutProps {
+    children: JSX.Element[]
+}
+const Layout = (props: LayoutProps) => (
   <div>
     <Header />
     {props.children}

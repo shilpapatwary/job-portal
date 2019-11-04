@@ -4,11 +4,14 @@ import Layout from '../../src/components/Layout';
 import {connect} from "react-redux";
 import JobDetails from '../../src/components/JobDetails';
 import GlobalStyles from '../../src/styles/GlobalStyles';
-
+import { Store } from '../../src/redux/types';
 interface Props {
      jobsList: Array<Job>,
      currentJob: Job
  }
+interface Query {
+    id: string
+}
 
 
  class JobDetailsPage extends Component<Props, any> {
@@ -19,7 +22,7 @@ interface Props {
         </Layout>
     }
 
-    static async getInitialProps({ store, query  }) {
+    static async getInitialProps({ store, query  }: {store: Store, query: Query}) {
         await store.dispatch({
             type: JobTypes.GET_JOB,
             id: query.id

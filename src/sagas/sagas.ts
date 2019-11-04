@@ -2,7 +2,7 @@ import { takeEvery, put, call, fork } from 'redux-saga/effects';
 import { JobTypes } from '../redux/types';
 import { getJobContent } from './apis';
 
-export function* watchGetJobAsync(jobID) {
+export function* watchGetJobAsync(jobID: any) {
     const {id} = jobID;
     const data = yield call(getJobContent);
     const payload = {data, id};
