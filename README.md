@@ -1,5 +1,7 @@
 # job-portal
 The application displays a list of jobs and opens the details of the job on next tab on clicking the read more button. Apply button in the job details page is included for future enhancements.This application is responsive across desktop, mobile and tablet devices and is server rendered.
+Data used in the application is saved and used from https://api.myjson.com/bins/cdxq0.
+Same api is used to fetch the job details (data is fetched and filtered), due to the unavailability of apis for this challenge.
 
 ## To run the application:
 1. npm install
